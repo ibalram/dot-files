@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[
+mxn = 1000002
+spf = list(range(mxn))
+def sieve():
+    for i in range(4,mxn,2): spf[i]=2
+    for i in range(3, int(mxn**.5)+1, 2):
+        if spf[i]!=i: continue
+        for j in range(i*i, mxn, i):
+            if spf[j]==j: spf[j]=i
+sieve()
+def pFactor(x):
+    ret = []
+    while x>1:
+        tmp,cnt = spf[x],1
+        x//=tmp
+        while x%tmp==0: x,cnt = x//tmp, cnt+1
+        ret.append(tmp)
+    return ret
+]]></content>
+<scope>source.python</scope>
+<tabTrigger>sieve_py</tabTrigger>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>hello</tabTrigger> -->
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

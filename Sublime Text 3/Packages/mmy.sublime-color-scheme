@@ -1,0 +1,63 @@
+{
+    "globals":
+    {
+        "background": "#ffffff",
+        "gutter": "darkgrey",
+        "gutter_foreground": "#ffffff",
+        "selection": "blue",
+        "selection_foreground": "white",
+        "selection_corner_style": "square",
+        "selection_border_width": "0",
+        "find_highlight": "yellow",
+    },
+
+    "rules":
+    [
+        {
+            "scope": "comment, punctuation.definition.comment",
+            "foreground": "#800",
+            "font_style": "bold",
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "#080",
+            "font_style": "bold",
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "foreground": "#066",
+        },
+        {
+            "scope": "keyword, keyword.operator.word, storage.type",
+            "foreground": "blue",
+            "font_style": "",
+        },
+        {
+            "scope": "keyword.operator",
+            "foreground": "olive",
+        },
+        {
+            "scope": "variable.language",
+            "foreground": "chocolate",
+            //self etc in python
+        },
+        {
+            "scope": "variable.parameter",
+            //"foreground": "brown",
+            //"font_style": "italic",
+        },
+        {
+            "scope": "entity.name.function, entity.name.class",
+            "foreground": "brown",
+            //"font_style": "bold",
+        },
+        {
+            "scope": "constant.language, constant.character.escape",
+            "foreground": "teal",
+            "font_style": "bold",
+        }
+
+    ]
+}
